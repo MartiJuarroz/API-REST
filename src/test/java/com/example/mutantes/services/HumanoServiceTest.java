@@ -39,7 +39,7 @@ public class HumanoServiceTest {
         assertEquals(listaEnviada,humanoService.findAll());
     }
 
-/*   @Test
+/   @Test
     public void findById() throws Exception {
 
         String adn = "[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]";
@@ -53,7 +53,7 @@ public class HumanoServiceTest {
         Humano encontrado = humanoService.findById(h.getId());
 
         assertEquals(encontrado.getId(),h.getId());
-    } */
+    } 
 
 
 

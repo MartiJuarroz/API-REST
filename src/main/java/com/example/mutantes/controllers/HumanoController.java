@@ -47,14 +47,14 @@ public class HumanoController {
         }
     }
 
- /*   @PutMapping("/{id}")
+   @PutMapping("/{id}")
     public ResponseEntity<?> update(@PathVariable  Long id,@RequestBody  Humano entity){
         try {
             return ResponseEntity.status(HttpStatus.OK).body(humanoService.update(id,entity));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error. Por favor intente mas tarde.\"}");
         }
-    }*/
+    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id){

@@ -83,7 +83,7 @@ public class HumanoService implements BaseService<Humano> {
         }
     }
 
-  /*  @Override
+   @Override
     @Transactional
     public Humano update(long id,Humano entity) throws Exception {
         try{
@@ -94,7 +94,7 @@ public class HumanoService implements BaseService<Humano> {
         } catch (Exception e){
             throw new Exception(e.getMessage());
         }
-    }*/
+    }
 
     @Override
     @Transactional

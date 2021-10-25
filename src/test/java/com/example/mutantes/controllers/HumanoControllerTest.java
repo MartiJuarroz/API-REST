@@ -48,20 +48,6 @@ public class HumanoControllerTest {
                 .andExpect(status().isOk());
     }
 
- /*   @Test
-    public void TestFindAllByEsMutanteExcep() throws Exception {
-        Humano h = new Humano();
-        h.setEsMutante(true);
-        List<Humano> listaEnviada = new ArrayList<>();
-        listaEnviada.add(h);
-
-        when(humanoService.findAllByEsMutante()).thenReturn(listaEnviada);
-
-        mockMvc.perform(get("/mutantes/v1/humanos/buscarMutantes")
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound());
-    }*/
-
     @Test
     public void TestFindAllByNoEsMutante() throws Exception {
         Humano h = new Humano();
@@ -78,9 +64,6 @@ public class HumanoControllerTest {
 
     @Test
     public void TestIsMutante() throws Exception {
-   //     Humano h = new Humano();
-   //     ADN adn = new ADN();
-   //    h.setAdn("[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]");
         String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
 
         when(humanoService.isMutant(dna)).thenReturn(true);
@@ -93,9 +76,6 @@ public class HumanoControllerTest {
 
     @Test
     public void TestIsMutanteExcep() throws Exception {
-        //     Humano h = new Humano();
-        //     ADN adn = new ADN();
-        //    h.setAdn("[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]");
         String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
 
         when(humanoService.isMutant(dna)).thenReturn(true);
@@ -108,9 +88,6 @@ public class HumanoControllerTest {
 
     @Test
     public void TestIsNotMutante() throws Exception {
-  /*      Humano h = new Humano();
-        ADN adn = new ADN();
-        h.setAdn("[\"ATGCGA\",\"CAGTAC\",\"TTATGT\",\"AGAAGG\",\"CCTCTA\",\"TCACTG\"]");*/
         String[] dna = {"ATGCGA","CAGTAC","TTATGT","AGAAGG","CCTCTA","TCACTG"};
 
         when(humanoService.isMutant(dna)).thenReturn(false);
@@ -123,9 +100,6 @@ public class HumanoControllerTest {
 
     @Test
     public void TestWrongMatrix() throws Exception {
-    /*    Humano h = new Humano();
-        ADN adn = new ADN();
-        h.setAdn("[\"ATGCG\",\"CAGTAC\",\"TTATGT\",\"AGAAGG\",\"CCTCTA\",\"TCACTG\"]");*/
         String[] dna = {"ATGCG","CAGTAC","TTATGT","AGAAGG","CCTCTA","TCACTG"};
 
         when(humanoService.isMutant(dna)).thenReturn(false);

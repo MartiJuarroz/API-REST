@@ -44,34 +44,4 @@ public class HumanoControllerIntegration {
                 .andExpect(status().isOk());
     }
 
-  /*  @Test
-    public void TestSave() throws Exception{
-        Humano h = new Humano();
-        h.setEsMutante(true);
-        h.setAdn("ATGCGA,AAGTGC,ATATGT,AGAAGG,CCCCTA,TCACTG");
-
-        humanoRepository.save(h);
-
-        mockMvc.perform(post("/mutantes/v1/humanos/")
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk());
-    }*/
-
-  /*  @Test
-    public void TestDelete() throws Exception{
-        Humano h = new Humano();
-        h.setEsMutante(true);
-        h.setAdn("ATGCGA,AAGTGC,ATATGT,AGAAGG,CCCCTA,TCACTG");
-        h.setId(10L);
-        List<Humano> listaEnviada = new ArrayList<>();
-        listaEnviada.add(h);
-
-        humanoRepository.save(h);
-
-        mockMvc.perform(get("/mutantes/v1/humanos//{10L}")
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNoContent());
-    }*/
-
-
 }

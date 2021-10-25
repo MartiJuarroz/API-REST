@@ -20,34 +20,4 @@ public class HumanoRepositoryTest {
     @Autowired
     private HumanoRepository humanoRepository;
 
-  /*  @Test
-    public void TestFindAllByEsMutante() {
-        Humano h = new Humano();
-        h.setEsMutante(true);
-
-        List<Humano> listaEnviada = new ArrayList<>();
-        listaEnviada.add(h);
-
-        entityManager.persist(h);
-        entityManager.flush();
-
-        assertEquals(listaEnviada, humanoRepository.findAllByEsMutante());
-
-    }
-
-    @Test
-    public void TestFindAllByNoEsMutante() {
-        Humano h = new Humano();
-        h.setEsMutante(false);
-
-        List<Humano> listaEnviada = new ArrayList<>();
-        listaEnviada.add(h);
-
-        entityManager.persist(h);
-        entityManager.flush();
-
-        assertEquals(listaEnviada, humanoRepository.findAllByNoEsMutante());
-
-    }*/
-
 }
