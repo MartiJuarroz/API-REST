@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\test",
+    "\\src\\test\\java",
+    "\\src\\test\\java\\com",
+    "\\src\\test\\java\\com\\example",
+    "\\src\\test\\java\\com\\example\\mutantes",
+    "\\src\\test\\java\\com\\example\\mutantes\\integration",
+    "\\src\\test\\java\\com\\example\\mutantes\\repositories",
+    "\\src\\test\\java\\com\\example\\mutantes\\services"
+  ],
+  "SelectedNode": "\\src\\test\\java\\com\\example\\mutantes\\application-test.properties",
+  "PreviewInSolutionExplorer": false
+}
