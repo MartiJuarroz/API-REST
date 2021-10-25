@@ -26,7 +26,6 @@ public class HumanoServiceTest {
 
     @Test
     public void findAll() throws Exception {
-
         String adn = "[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]";
         Humano h = new Humano();
         h.setEsMutante(true);
@@ -39,7 +38,7 @@ public class HumanoServiceTest {
         assertEquals(listaEnviada,humanoService.findAll());
     }
 
-/   @Test
+   @Test
     public void findById() throws Exception {
 
         String adn = "[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]";
@@ -48,7 +47,7 @@ public class HumanoServiceTest {
         h.setEsMutante(true);
         h.setId(10L);
 
-        Mockito.when(humanoRepository.findById(h.getId())).thenReturn(h);
+        Mockito.when(humanoRepository.findById(h.getId())).thenReturn(Optional.of(h));
 
         Humano encontrado = humanoService.findById(h.getId());
 
