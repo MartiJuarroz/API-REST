@@ -37,12 +37,12 @@ public class HumanoService implements BaseService<Humano> {
             contador = det.RecorrerContraDiagonal(ADN, contador);
             if (contador >= 2){
                 h.setEsMutante(true);
-                h.setAdn(dna.toString());
+                h.setAdn(ADN.toString());
                 humanoRepository.save(h);
                 return true;
             }
             h.setEsMutante(false);
-            h.setAdn(dna.toString());
+            h.setAdn(ADN.toString());
             humanoRepository.save(h);
             return false;
         } catch (Exception e) {
