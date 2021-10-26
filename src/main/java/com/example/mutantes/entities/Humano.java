@@ -22,6 +22,7 @@ public class Humano implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+   // @ElementCollection
     @Column
     private String adn;
 

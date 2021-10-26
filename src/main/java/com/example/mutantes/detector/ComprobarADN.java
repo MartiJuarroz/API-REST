@@ -111,7 +111,7 @@ public class ComprobarADN {
             return contador;
         }
         buscar: for (int i = 0; i < adn.size() - 3; i++) {
-          buscar2: for (int j = adn.get(i).length() - 1; j >= adn.get(i).length() - 3; j--) {
+          buscar2: for (int j = adn.get(i).length() - 1; j > adn.get(i).length() - 2; j--) {
                 if (CompararLetras(adn.get(i).charAt(j), adn.get(i + 1).charAt(j - 1), adn.get(i +2).charAt(j - 2),
                         adn.get(i + 3).charAt(j - 3))) {
                     contador++;
