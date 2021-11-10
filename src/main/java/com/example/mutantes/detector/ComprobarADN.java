@@ -53,15 +53,15 @@ public class ComprobarADN {
 
     public int RecorrerDiagonal(List<String> adn, int contador) {
         // recorrer diagonales
-        buscar:for (int i = 0; i < adn.size() - 3; i++) {
-           buscar2: for (int j = 0; j < adn.get(i).length() - 3; j++) {
-                if (CompararLetras(adn.get(i).charAt(j), adn.get(i + 1).charAt(j + 1), adn.get(i + 2).charAt(j + 2)
-                        , adn.get(i + 3).charAt(j + 3))) {
-                    contador++;
+        for (int i = 0; i < adn.size() - 3; i++) { // se itera en i, es decir, en las filas
+           buscar2: for (int j = 0; j < adn.get(i).length() - 3; j++) { // se itera en j, es decir, en las columnas.
+                if (CompararLetras(adn.get(i).charAt(j), adn.get(i + 1).charAt(j + 1), adn.get(i + 2).charAt(j + 2) // Se compara aumentando las filas y las columnas
+                        , adn.get(i + 3).charAt(j + 3))) {                                                          // para recorrer diagonalmente
+                    contador++;                                                                                     // Ej: [0][0] [1][1] [2][2]
                     break buscar2;
                 }
                 if (contador == 2) {
-                    break buscar;
+                    return contador;
                 }
             }
         }
@@ -72,15 +72,15 @@ public class ComprobarADN {
         if (contador >= 2){
             return contador;
         }
-        buscar:for (int i = 0; i < adn.size() - 3; i++) {
-          buscar2:  for (int j = 0; j < adn.get(i).length(); j++) {
-                if (CompararLetras(adn.get(i).charAt(j), adn.get(i + 1).charAt(j), adn.get(i + 2).charAt(j)
-                        , adn.get(i + 3).charAt(j))) {
+        for (int i = 0; i < adn.size() - 3; i++) { // se itera en i, es decir, en las filas
+          buscar2:  for (int j = 0; j < adn.get(i).length(); j++) { // se itera en j, es decir, en las columnas.
+                if (CompararLetras(adn.get(i).charAt(j), adn.get(i + 1).charAt(j), adn.get(i + 2).charAt(j) // Se compara aumentando las filas para recorrer verticalmente
+                        , adn.get(i + 3).charAt(j))) {                                                      // Ej: [0][0] [1][0] [2][0]
                     contador++;
                     break buscar2;
                 }
                 if (contador == 2) {
-                    break buscar;
+                    return contador;
                 }
             }
         }
@@ -91,15 +91,15 @@ public class ComprobarADN {
         if (contador >= 2){
             return contador;
         }
-        buscar:for (int i = 0; i < adn.size(); i++) {
+        for (int i = 0; i < adn.size(); i++) {
             buscar2: for (int j = 0; j < adn.get(i).length()-3; j++) {
-                if (CompararLetras(adn.get(i).charAt(j), adn.get(i).charAt(j+1), adn.get(i).charAt(j+2)
-                        , adn.get(i).charAt(j+3))) {
+                if (CompararLetras(adn.get(i).charAt(j), adn.get(i).charAt(j+1), adn.get(i).charAt(j+2) // Se compara aumentando las columnas para recorrer horizontalmente
+                        , adn.get(i).charAt(j+3))) {                                                    // Ej: [0][0] [0][1] [0][2]
                     contador++;
                     break buscar2;
                 }
                 if (contador == 2) {
-                    break buscar;
+                    return contador;
                 }
             }
         }
@@ -110,15 +110,15 @@ public class ComprobarADN {
         if (contador >= 2){
             return contador;
         }
-        buscar: for (int i = 0; i < adn.size() - 3; i++) {
-          buscar2: for (int j = adn.get(i).length() - 1; j > adn.get(i).length() - 2; j--) {
-                if (CompararLetras(adn.get(i).charAt(j), adn.get(i + 1).charAt(j - 1), adn.get(i +2).charAt(j - 2),
-                        adn.get(i + 3).charAt(j - 3))) {
+        for (int i = 0; i < adn.size() - 3; i++) {
+          buscar2: for (int j = adn.get(i).length() - 1; j > adn.get(i).length() - 2; j--) { // Se compara aumentando las filas y disminuyendo las columnas
+                if (CompararLetras(adn.get(i).charAt(j), adn.get(i + 1).charAt(j - 1), adn.get(i +2).charAt(j - 2),  // para recorrer la contradiagonal
+                        adn.get(i + 3).charAt(j - 3))) {                                                             // Ej: [6][6] [5][5] [4][4]
                     contador++;
                     break buscar2;
                 }
                 if (contador == 2) {
-                    break buscar;
+                    return contador;
                 }
             }
         }
